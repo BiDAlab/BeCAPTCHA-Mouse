@@ -1,7 +1,7 @@
-# BeCAPTCHA-Mouse
+# BeCAPTCHA-Mouse Benchmark
 BeCAPTCHA-Mouse Benchmark for development of bot detection technologyes based on mouse dynamics
 
-## INSTRUCTIONS FOR DOWNLOADING MobileTouchDB 
+## INSTRUCTIONS FOR DOWNLOADING BeCAPTCHA-Mouse Benchmark
 1) [Download license agreement](http://atvs.ii.uam.es/atvs/licenses/MobileTouchDB_License.pdf), send by email one signed and scanned copy to **atvs@uam.es** according to the instructions given in point 2.
  
  
