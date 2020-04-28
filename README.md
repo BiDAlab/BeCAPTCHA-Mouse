@@ -21,7 +21,7 @@ BeCAPTCHA-Mouse Benchmark for development of bot detection technologyes based on
 5) For more information, please contact: **atvs@uam.es**
 
 
-## DESCRIPTION OF MobileTouchDB 
+## DESCRIPTION OF BeCAPTCHA-Mouse BENCHMARK
 
 MobileTouchDB contains more than 64K on-line character samples performed by **217 users, using 94 different smartphone models**, with an average of 314 samples per user. In each acquisition session, users had to draw all numbers (from 0 to 9), upper- and lower-case letters (54), different symbols (8), and passwords composed of 4 numbers (6). Regarding the acquisition protocol, MobileTouchDB comprises a maximum of 6 captured sessions per subject with a time gap between them of at least 2 days. **This database studies an unsupervised mobile scenario with no restrictions in terms of position, posture, and devices. Users downloaded and used the acquisition app on their own devices freely**.
 
