@@ -1,5 +1,5 @@
 # BeCAPTCHA-Mouse Benchmark
-BeCAPTCHA-Mouse Benchmark for development of bot detection technologyes based on mouse dynamics
+BeCAPTCHA-Mouse Benchmark for development of bot detection technologyes based on mouse dynamics [1].
 
 ## INSTRUCTIONS FOR DOWNLOADING BeCAPTCHA-Mouse Benchmark
 1) [Download license agreement](http://atvs.ii.uam.es/atvs/licenses/BeCAPTCHA_Mouse_Benchmark.pdf), send by email one signed and scanned copy to **atvs@uam.es** according to the instructions given in point 2.
@@ -49,26 +49,30 @@ The human mouse trajectories employed to train the GAN network  were extracted f
 
 
 #### BENCHMARK STRUCTURE
-BeCAPTCHA-Mouse benchmark are composed by two main folders: *'DB_GAN'* which contains the synthetic GAN trayectories and *'DB_fcn'* that contains the function-based ones. Each folder has other two folders: *'raw'* folder which contains the raw data of the synthetic mouse trayectories in .txt files, and *'neuromotor'* folder that contains the neuromotor features (depicted in [3]) extracted from the raw files in .hws format. Both kind of files have the same name to match them easily.
+BeCAPTCHA-Mouse benchmark are composed by two main folders: *'DB_GAN'* which contains the synthetic GAN trayectories and *'DB_fcn'* that contains the function-based ones. Each folder has other two folders: *'raw'* folder which contains the raw data of the synthetic mouse trayectories in .txt files, and *'neuromotor'* folder that contains the sigma-Lognormal descomposition (more details in [3]) of the raw files in .ana format. Both kind of files have the same name to match them easily.
 
 #### FILES FORMAT
-+ ROW 1: it just contains one entry with the number of sampled points of the handwritten character (N).
++ .txt files: it just contains two columns with the **{x, y}** mouse coordinates.
+  + COLUMN 1: represents the **x** coordinate.
 
-+ ROWS 2 to (N+1):
+  + COLUMN 2: represents the **y** coordinate.
 
-  + COLUMN 1: represents the X coordinate.
++ .ana files: each row contains a log-normal signal extracted from the mouse trayectory, this log-normal signal is definded by 6 parameters.  
 
-  + COLUMN 2: represents the y coordinate.
+  + COLUMN 1: represents the *D* parameter.
 
-  + COLUMN 3: represents the timestamp.
+  + COLUMN 2: represents the *t<sub>0</sub>* parameter.
 
-  + COLUMN 4: represents the area covered by the finger.
+  + COLUMN 3: represents the *sigma* parameter.
 
-  + COLUMNS 5, 6, and 7: represents the accelerometer information (X, Y, and Z axes).
+  + COLUMN 4: represents the *tao* parameter.
 
-  + COLUMNS 8, 9, and 10: represents the gyroscope information (X, Y, and Z axes).
+  + COLUMNS 5 : represents the *phi<sub>s</sub>* parameter.
   
-However, information related to the area covered by the finger, accelerometer, and gyroscope (COLUMNS 5 to 10) might not be available in some cases depending on how old the acquisition device was.
+  + COLUMNS 6 : represents the *phi<sub>e</sub>* parameter.
+  
+  + COLUMNS 8, 9: are zeros.
+  
 
 #### FILES NOMENCLATURE
 The nomenclature followed to name the files is as follows: uA_sB_CD.txt
