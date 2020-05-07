@@ -24,7 +24,7 @@ BeCAPTCHA-Mouse Benchmark for development of bot detection technologyes based on
 ## DESCRIPTION OF BeCAPTCHA-Mouse BENCHMARK
 BeCAPTCHA-Mouse benchmark contains more than 10K synthetic mouse trayectories generated with two methods: 
 
-**Method 1: Function-based Mouse Trajectory Synthesis**
+**Method 1: Function-based Mouse Trajectory Synthesis**  
 With this approach the mouse trajectories are generated according to three different trajectory shapes (linear, quadratic, and exponential) and three different velocity profiles (constant, logarithmic, and Gaussian). 
 To generate a synthetic trajectory **{x, y}** with *M* points, first we define the initial point [*x<sub>1</sub>, y<sub>1</sub>*] and ending point [*x<sub>M</sub>, y<sub>M</sub>*]. Second, we select one of three velocity profiles: *i)* constant velocity, where the distance between adjacent points is constant; *ii)* logarithmic velocity, where the distances are gradually increasing (acceleration); and *iii)* Gaussian velocity, in which the distances first increase and then decrease when they get close to the end of the trajectory (acceleration and deceleration). Third, we generate a sequence **x** between *x<sub>1</sub>* and *x<sub>M</sub>* spaced according to the selected velocity profile. The **y** sequence is then generated according to the shape function. For example, for a shape defined by the quadratic function *y = ax<sup>2</sup> + bx + c*, we fit *b* and *c* for *a* fixed value of *a* by using the initial and ending points. We repeat the process fixing either *b* or *c*. The range of the parameters {*a, b, c*} explored is determined by analyzing real
 mouse movements fitted to quadratic functions. Linear and exponential shapes are generated similarly.
@@ -34,7 +34,7 @@ with this approach by varying the parameters of each function.
 ![](https://github.com/BiDAlab/BeCAPTCHA-Mouse/blob/master/Fig5.png)
 Figigure 1. Examples of mouse trajectories and their velocity profiles employed in this work: *A* is a real one extracted from a task of the database; *B* and *C* are synthetic trajectories generated with the GAN network; *D*, *E* and *F* are generated with the knowledge-based approach. Note that for each velocity profile (*D* = Gaussian, *E* = constant, *F* = logarithmic), we include the three knowledge-based trajectories (linear, quadratic, and exponential).
 
-**Method 2: GAN-based Trajectories**
+**Method 2: GAN-based Trajectories**  
 For this approach we employ a GAN (Generative Adversarial Network),in which two neuronal networks, commonly named Generator and Discriminator, are trained one against the other (thus the \adversarial"). The architecture of the GAN is depicted in Fig. 2.
 
 ![](https://github.com/BiDAlab/BeCAPTCHA-Mouse/blob/master/Fig6.png)
