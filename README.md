@@ -49,7 +49,7 @@ The human mouse trajectories employed to train the GAN network  were extracted f
 
 
 #### FILES FORMAT
-BeCAPTCHA-Mouse benchmark are composed by two main folders: 'DB_GAN' which contains the synthetic GAN trayectories and 'DB_fcn' which contains the function-based ones.The handwritten characters are stored in text files, where:
+BeCAPTCHA-Mouse benchmark are composed by two main folders: ~'DB_GAN'~ which contains the synthetic GAN trayectories and 'DB_fcn' which contains the function-based ones.The handwritten characters are stored in text files, where:
 
 + ROW 1: it just contains one entry with the number of sampled points of the handwritten character (N).
 
