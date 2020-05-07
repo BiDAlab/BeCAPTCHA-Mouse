@@ -63,15 +63,15 @@ BeCAPTCHA-Mouse benchmark are composed by two main folders: *'DB_GAN'* which con
 
   + COLUMN 2: represents the *t<sub>0</sub>* parameter.
 
-  + COLUMN 3: represents the *sigma* parameter.
+  + COLUMN 3: represents the *μ* parameter.
 
-  + COLUMN 4: represents the *tao* parameter.
+  + COLUMN 4: represents the *σ* parameter.
 
-  + COLUMNS 5 : represents the *phi<sub>s</sub>* parameter.
+  + COLUMNS 5 : represents the *θ<sub>s</sub>* parameter.
   
-  + COLUMNS 6 : represents the *phi<sub>e</sub>* parameter.
+  + COLUMNS 6 : represents the *θ<sub>e</sub>* parameter.
   
-  + COLUMNS 8, 9: are zeros.
+  + COLUMNS 7, 8: are zeros.
   
 
 #### FILES NOMENCLATURE
