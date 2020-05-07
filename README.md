@@ -2,12 +2,12 @@
 BeCAPTCHA-Mouse Benchmark for development of bot detection technologyes based on mouse dynamics
 
 ## INSTRUCTIONS FOR DOWNLOADING BeCAPTCHA-Mouse Benchmark
-1) [Download license agreement](http://atvs.ii.uam.es/atvs/licenses/MobileTouchDB_License.pdf), send by email one signed and scanned copy to **atvs@uam.es** according to the instructions given in point 2.
+1) [Download license agreement](http://atvs.ii.uam.es/atvs/licenses/BeCAPTCHA_Mouse_Benchmark.pdf), send by email one signed and scanned copy to **atvs@uam.es** according to the instructions given in point 2.
  
  
 2) Send an email to **atvs@uam.es**, as follows:
 
-   *Subject:* **[DATABASE download: MobileTouchDB]**
+   *Subject:* **[DATABASE download: BeCAPTCHA_Mouse_Benchmark]**
 
    Body: Your name, e-mail, telephone number, organization, postal mail, purpose for which you will use the database, time and date at which you sent the email with the signed license agreement.
  
@@ -15,14 +15,14 @@ BeCAPTCHA-Mouse Benchmark for development of bot detection technologyes based on
 3) Once the email copy of the license agreement has been received at ATVS, you will receive an email with a username, a password, and a time slot to download the database.
  
 
-4) [Download the database](http://atvs.ii.uam.es/atvs/intranet/free_DB/MobileTouchDB), for which you will need to provide the authentication information given in step 4. After you finish the download, please notify by email to **atvs@uam.es** that you have successfully completed the transaction.
+4) [Download the database](http://atvs.ii.uam.es/atvs/intranet/BeCAPTCHA_Mouse_Benchmark), for which you will need to provide the authentication information given in step 4. After you finish the download, please notify by email to **atvs@uam.es** that you have successfully completed the transaction.
  
 
 5) For more information, please contact: **atvs@uam.es**
 
 
 ## DESCRIPTION OF BeCAPTCHA-Mouse BENCHMARK
-
+\tilde{a}
 BeCAPTCHA-Mouse BENCHMARK contains more than 10K synthetic mouse trayectories generated with two methods: 
 
 **Method 1: Knowledge-based Mouse Trajectory Synthesis**
