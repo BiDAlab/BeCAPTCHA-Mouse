@@ -48,9 +48,10 @@ Human mouse patterns such us the initial acceleration and the final trajectory f
 The human mouse trajectories employed to train the GAN network  were extracted from Chao *et al.* [1] database, which is comprised of more than 200K mouse trajectories acquired from 58 users who completed 300 repetitions of the task.In each repetition, the task was to click 8 buttons that appeared in the screen sequentially. This task was repeated twice in each session
 
 
-#### FILES FORMAT
-BeCAPTCHA-Mouse benchmark are composed by two main folders: ~'DB_GAN'~ which contains the synthetic GAN trayectories and 'DB_fcn' which contains the function-based ones.The handwritten characters are stored in text files, where:
+#### BENCHMARK STRUCTURE
+BeCAPTCHA-Mouse benchmark are composed by two main folders: *'DB_GAN'* which contains the synthetic GAN trayectories and *'DB_fcn'* that contains the function-based ones. Each folder has other two folders: *'raw'* folder which contains the raw data of the synthetic mouse trayectories in .txt files, and *'neuromotor'* folder that contains the neuromotor features (depicted in [3]) extracted from the raw files in .hws format. Both kind of files have the same name to match them easily.
 
+#### FILES FORMAT
 + ROW 1: it just contains one entry with the number of sampled points of the handwritten character (N).
 
 + ROWS 2 to (N+1):
