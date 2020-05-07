@@ -44,12 +44,12 @@ The aim of the Generator is to fool the Discriminator by generating fake samples
 Generator is trained this way, then we can use it to synthesize mouse trajectories very similar to the human ones.
 The topology employed in both Generator and Discriminator consist of two LSTM (Long Short-Term Memory) layers followed by a dense layer, very similar to a recurrent auto-encoder. The dense layer of the Discriminator is used as a classification layer to distinguish between fake and real mouse trajectories, while the Generator employs the dense layer to build synthetic mouse trajectories.
 Fig. 1 shows two examples (trajectories B and C) of synthetic mouse trajectories generated with the GAN network and the comparison with a real one. We can observe high similarity between the two synthetic examples and the real one.
-Human mouse patterns such us the initial acceleration and the final trajectory fine correction that we discussed before are automatically learned by the GAN network and reproduced in the synthetic trajectories generated.
+Human mouse patterns such us the initial acceleration and the final trajectory fine correction that we discussed before are automatically learned by the GAN network and reproduced in the synthetic trajectories generated.  
 The human mouse trajectories employed to train the GAN network  were extracted from Chao *et al.* [1] database, which is comprised of more than 200K mouse trajectories acquired from 58 users who completed 300 repetitions of the task.In each repetition, the task was to click 8 buttons that appeared in the screen sequentially. This task was repeated twice in each session
 
 
 #### FILES FORMAT
-The handwritten characters are stored in text files, where:
+BeCAPTCHA-Mouse benchmark are composed by two main folders: 'DB_GAN' which contains the synthetic GAN trayectories and 'DB_fcn' which contains the function-based ones.The handwritten characters are stored in text files, where:
 
 + ROW 1: it just contains one entry with the number of sampled points of the handwritten character (N).
 
