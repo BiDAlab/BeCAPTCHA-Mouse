@@ -7,7 +7,7 @@ BeCAPTCHA-Mouse Benchmark for development of bot detection technologyes based on
  
 2) Send an email to **atvs@uam.es**, as follows:
 
-   *Subject:* **[DATABASE download: BeCAPTCHA_Mouse_Benchmark]**
+   *Subject:* **[DATABASE benchmark: BeCAPTCHA_Mouse_Benchmark]**
 
    Body: Your name, e-mail, telephone number, organization, postal mail, purpose for which you will use the database, time and date at which you sent the email with the signed license agreement.
  
@@ -15,14 +15,14 @@ BeCAPTCHA-Mouse Benchmark for development of bot detection technologyes based on
 3) Once the email copy of the license agreement has been received at ATVS, you will receive an email with a username, a password, and a time slot to download the database.
  
 
-4) [Download the database](http://atvs.ii.uam.es/atvs/intranet/BeCAPTCHA_Mouse_Benchmark), for which you will need to provide the authentication information given in step 4. After you finish the download, please notify by email to **atvs@uam.es** that you have successfully completed the transaction.
+4) [Download the benchmark](http://atvs.ii.uam.es/atvs/intranet/BeCAPTCHA_Mouse_Benchmark), for which you will need to provide the authentication information given in step 4. After you finish the download, please notify by email to **atvs@uam.es** that you have successfully completed the transaction.
  
 
 5) For more information, please contact: **atvs@uam.es**
 
 
 ## DESCRIPTION OF BeCAPTCHA-Mouse BENCHMARK
-BeCAPTCHA-Mouse BENCHMARK contains more than 10K synthetic mouse trayectories generated with two methods: 
+BeCAPTCHA-Mouse benchmark contains more than 10K synthetic mouse trayectories generated with two methods: 
 
 **Method 1: Function-based Mouse Trajectory Synthesis**
 
@@ -30,11 +30,13 @@ In this method the mouse trajectories are generated according to three different
 To generate a synthetic trajectory **{x, y}** with *M* points, first we define the initial point [*x<sub>1</sub>, y<sub>1</sub>*] and ending point [*x<sub>M</sub>, y<sub>M</sub>*]. Second, we select one of three velocity profiles: *i)* constant velocity, where the distance between adjacent points is constant; *ii)* logarithmic velocity, where the distances are gradually increasing (acceleration); and *iii)* Gaussian velocity, in which the distances first increase and then decrease when they get close to the end of the trajectory (acceleration and deceleration). Third, we generate a sequence **x** between *x<sub>1</sub>* and *x<sub>M</sub>* spaced according to the selected velocity profile. The **y** sequence is then generated according to the shape function. For example, for a shape defined by the quadratic function *y = ax<sup>2</sup> + bx + c*, we fit *b* and *c* for *a* fixed value of *a* by using the initial and ending points. We repeat the process fixing either *b* or *c*. The range of the parameters {*a, b, c*} explored is determined by analyzing real
 mouse movements fitted to quadratic functions. Linear and exponential shapes are generated similarly.
 
+Fig. 1 (trajectories D, E, and F) shows some examples of these mouse trajectories synthesized. That figure also shows the 3 diferent velocity profiles considered: the 3 trajectories in *E* have constant velocity, *F* shows acceleration (the distance between adjacent samples increases gradually), and *D* has initial acceleration and final deceleration. We can generate infinite mouse trajectories
+with this approach by varying the parameters of each function.
+
 ![](https://github.com/BiDAlab/BeCAPTCHA-Mouse/blob/master/Fig5.png)
 Figigure 1. Examples of mouse trajectories and their velocity profiles employed in this work: *A* is a real one extracted from a task of the database; *B* and *C* are synthetic trajectories generated with the GAN network; *D*, *E* and *F* are generated with the knowledge-based approach. Note that for each velocity profile (*D* = Gaussian, *E* = constant, *F* = logarithmic), we include the three knowledge-based trajectories (linear, quadratic, and exponential).
 
-Fig. 1 (trajectories D, E, and F) shows some examples of these mouse trajectories synthesized. That figure also shows the 3 diferent velocity profiles considered: the 3 trajectories in *E* have constant velocity, *F* shows acceleration (the distance between adjacent samples increases gradually), and *D* has initial acceleration and final deceleration. We can generate infinite mouse trajectories
-with this approach by varying the parameters of each function.
+
 
 on-line character samples performed by **217 users, using 94 different smartphone models**, with an average of 314 samples per user. In each acquisition session, users had to draw all numbers (from 0 to 9), upper- and lower-case letters (54), different symbols (8), and passwords composed of 4 numbers (6). Regarding the acquisition protocol, MobileTouchDB comprises a maximum of 6 captured sessions per subject with a time gap between them of at least 2 days. **This database studies an unsupervised mobile scenario with no restrictions in terms of position, posture, and devices. Users downloaded and used the acquisition app on their own devices freely**.
 
