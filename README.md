@@ -1,5 +1,5 @@
 # BeCAPTCHA-Mouse Benchmark 
-BeCAPTCHA-Mouse Benchmark for development of bot detection technologyes based on mouse dynamics [1].
+BeCAPTCHA-Mouse Benchmark for development of bot detection technologyes based on mouse dynamics.
 
 ## INSTRUCTIONS FOR DOWNLOADING BeCAPTCHA-Mouse Benchmark
 1) [Download license agreement](http://atvs.ii.uam.es/atvs/licenses/BeCAPTCHA_Mouse_Benchmark.pdf), send by email one signed and scanned copy to **atvs@uam.es** according to the instructions given in point 2.
@@ -26,7 +26,7 @@ BeCAPTCHA-Mouse benchmark contains more than 10K synthetic mouse trayectories ge
 
 **Method 1: Function-based Mouse Trajectory Synthesis**  
 With this approach the mouse trajectories are generated according to three different trajectory shapes (linear, quadratic, and exponential) and three different velocity profiles (constant, logarithmic, and Gaussian). 
-To generate a synthetic trajectory **{x̂, y}** with *M* points, first we define the initial point [*x̂<sub>1</sub>, y<sub>1</sub>*] and ending point [*x̂<sub>M</sub>, y<sub>M</sub>*]. Second, we select one of three velocity profiles: *i)* constant velocity, where the distance between adjacent points is constant; *ii)* logarithmic velocity, where the distances are gradually increasing (acceleration); and *iii)* Gaussian velocity, in which the distances first increase and then decrease when they get close to the end of the trajectory (acceleration and deceleration). Third, we generate a sequence **x̂** between *x̂<sub>1</sub>* and *x̂<sub>M</sub>* spaced according to the selected velocity profile. The **y** sequence is then generated according to the shape function. For example, for a shape defined by the quadratic function *y = ax̂<sup>2</sup> + bx̂ + c*, we fit *b* and *c* for *a* fixed value of *a* by using the initial and ending points. We repeat the process fixing either *b* or *c*. The range of the parameters {*a, b, c*} explored is determined by analyzing real
+To generate a synthetic trajectory **{x̂, ŷ}** with *M* points, first we define the initial point [*x̂<sub>1</sub>, ŷ<sub>1</sub>*] and ending point [*x̂<sub>M</sub>, ŷ<sub>M</sub>*]. Second, we select one of three velocity profiles: *i)* constant velocity, where the distance between adjacent points is constant; *ii)* logarithmic velocity, where the distances are gradually increasing (acceleration); and *iii)* Gaussian velocity, in which the distances first increase and then decrease when they get close to the end of the trajectory (acceleration and deceleration). Third, we generate a sequence **x̂** between *x̂<sub>1</sub>* and *x̂<sub>M</sub>* spaced according to the selected velocity profile. The **ŷ** sequence is then generated according to the shape function. For example, for a shape defined by the quadratic function *ŷ = ax̂<sup>2</sup> + bx̂ + c*, we fit *b* and *c* for *a* fixed value of *a* by using the initial and ending points. We repeat the process fixing either *b* or *c*. The range of the parameters {*a, b, c*} explored is determined by analyzing real
 mouse movements fitted to quadratic functions. Linear and exponential shapes are generated similarly.
 Fig. 1 (trajectories D, E, and F) shows some examples of these mouse trajectories synthesized. That figure also shows the 3 diferent velocity profiles considered: the 3 trajectories in *E* have constant velocity, *F* shows acceleration (the distance between adjacent samples increases gradually), and *D* has initial acceleration and final deceleration. We can generate infinite mouse trajectories
 with this approach by varying the parameters of each function.
@@ -52,10 +52,10 @@ The human mouse trajectories employed to train the GAN network  were extracted f
 BeCAPTCHA-Mouse benchmark are composed by two main folders: *'DB_GAN'* which contains the synthetic GAN trayectories and *'DB_fcn'* that contains the function-based ones. Each folder has other two folders: *'raw'* folder which contains the raw data of the synthetic mouse trayectories in .txt files, and *'neuromotor'* folder that contains the sigma-Lognormal descomposition (more details in [3]) of the raw files in .ana format. Both kind of files have the same name to match them easily.
 
 #### FILES FORMAT
-+ .txt files: it just contains two columns with the **{x̂, y}** mouse coordinates.
++ .txt files: it just contains two columns with the **{x̂, ŷ}** mouse coordinates.
   + COLUMN 1: represents the **x̂** coordinate.
 
-  + COLUMN 2: represents the **y** coordinate.
+  + COLUMN 2: represents the **ŷ** coordinate.
 
 + .ana files: each row contains a log-normal signal extracted from the mouse trayectory, this log-normal signal is definded by 6 parameters.  
 
@@ -75,44 +75,31 @@ BeCAPTCHA-Mouse benchmark are composed by two main folders: *'DB_GAN'* which con
   
 
 #### FILES NOMENCLATURE
-The nomenclature followed to name the files is as follows: uA_sB_CD.txt
+The nomenclature followed to name the files of the function based method is: NNNN_y=A_vp=B_task=C.txt
 
-+ A: indicates the number of the user.
++ NNNN: indicates the number of the sample.
 
-+ B: indicates the number of the acquisition session [1, 2, ... , 6].
++ A: indicates the shape of the trajectory:
 
-+ C: indicates the acquisition blocks:
+  + 0 = linear.
+  
+  + 1 = quadratic.
+  
+  + 2 = exponential.
+  
++ B: indicates the velocity profile:
 
-  + num = numbers.
+  + 0 = constant velocity.
   
-  + may = upper-case letters.
+  + 1 = logarithmic velocity.
   
-  + min = lower-case letters.
+  + 2 = Gaussian velocity.
   
-  + simb = symbols.
   
-+ D: indicates the specific character/password inside each block [(0,1,.,9); (A,B,.,Z); (a,b,.,z); (?, #,.,?)]. For the case of symbols, the nomenclature is as follows:
-
-  + _simb1 = "?" symbol.
-  
-  + _simb2 = "#" symbol.
-  
-  + _simb3 = "*" symbol.
-  
-  + _simb4 = "@" symbol.
-  
-  + _simb5 = "%" symbol.
-  
-  + _simb6 = "=" symbol.
-  
-  + _simb7 = "ε" symbol.
-  
-  + _simb8 = "α" symbol.
-  
-* Please note that there is a mistake in Fig. 2. There are 158 users with at least two sessions, not 159.
-
++ C: indicates the task (1-8) of the human mouse database in which the trayectory was synthetized. This is necessary because the function-based method needs the initial [*x̂<sub>1</sub>, ŷ<sub>1</sub>*] and the [*x̂<sub>M</sub>, ŷ<sub>M</sub>*] end point of the human trayectory to synthetyse.
+.
 #### REFERENCES
-For further information on the database and on different applications where it has been used, we refer the reader to (all these articles are publicly available in the [publications](http://atvs.ii.uam.es/atvs/listpublications.do) section of the BiDA group webpage.)
+For further information on the benchmark and on different applications where it has been used, we refer the reader to (all these articles are publicly available in the [publications](http://atvs.ii.uam.es/atvs/listpublications.do) section of the BiDA group webpage.)
 
 + [TIFS2020_MobileTouchDB] R. Tolosana, R. Vera-Rodriguez, J. Fierrez and J. Ortega-Garcia, “BioTouchPass2: Touchscreen Password Biometrics Using Time-Aligned Recurrent Neural Networks”, *IEEE Transactions on Information Forensics and Security*, vol. 15, pp: 2616-2628, 2020.
 
