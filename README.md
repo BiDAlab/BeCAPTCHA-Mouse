@@ -43,7 +43,7 @@ Figure 2. The proposed architecture to train a GAN Generator of synthetic mouse 
 The aim of the Generator is to fool the Discriminator by generating fake samples (mouse trajectories in this work) very similar to the real ones while the Discriminator has to predict whether the sample comes from the real set or is a fake created by the Generator. Once the Generator is trained this way, then we can use it to synthesize mouse trajectories very similar to the human ones.
 The topology employed in both Generator and Discriminator consist of two LSTM (Long Short-Term Memory) layers followed by a dense layer, very similar to a recurrent auto-encoder. The dense layer of the Discriminator is used as a classification layer to distinguish between fake and real mouse trajectories, while the Generator employs the dense layer to build synthetic mouse trajectories.
 Fig. 1 shows two examples (trajectories B and C) of synthetic mouse trajectories generated with the GAN network and the comparison with a real one.  
-The human mouse trajectories employed to train the GAN network  were extracted from Chao *et al.* [1] database, which is comprised of more than 200K mouse trajectories acquired from 58 users who completed 300 repetitions of the task.In each repetition, the task was to click 8 buttons that appeared in the screen sequentially. This task was repeated twice in each session
+The human mouse trajectories employed to train the GAN network  were extracted from Chao *et al.* [2] database, which is comprised of more than 200K mouse trajectories acquired from 58 users who completed 300 repetitions of the task.In each repetition, the task was to click 8 buttons that appeared in the screen sequentially. This task was repeated twice in each session
 
 
 #### BENCHMARK STRUCTURE
@@ -73,7 +73,7 @@ BeCAPTCHA-Mouse benchmark are composed by two main folders: *'DB_GAN'* which con
   
 
 #### FILES NOMENCLATURE
-The nomenclature followed to name the files of the function based method is: NNNN_y=A_vp=B_task=C.txt
+The nomenclature followed to name the files of the function-based method is: NNNN_y=A_vp=B_task=C.txt
 
 + NNNN: indicates the number of the sample.
 
@@ -97,10 +97,13 @@ The nomenclature followed to name the files of the function based method is: NNN
 + C: indicates the task (1-8) of the human mouse database in which the trayectory was synthetized. This is necessary because the function-based method needs the initial [*x̂<sub>1</sub>, ŷ<sub>1</sub>*] and the end [*x̂<sub>M</sub>, ŷ<sub>M</sub>*] points of the human trayectory to synthetyse.
 .
 #### REFERENCES
-For further information on the benchmark and on different applications where it has been used, we refer the reader to (all these articles are publicly available in the [publications](http://atvs.ii.uam.es/atvs/listpublications.do) section of the BiDA group webpage.)
+For further information on the benchmark and on different applications where it has been used, we refer the reader to (all these articles are publicly available in the [publications](http://atvs.ii.uam.es/atvs/listpublications.do) section of the BiDA group webpage).Please cite [1] below if you make use of the dataset:
 
-+ [TIFS2020_MobileTouchDB] R. Tolosana, R. Vera-Rodriguez, J. Fierrez and J. Ortega-Garcia, “BioTouchPass2: Touchscreen Password Biometrics Using Time-Aligned Recurrent Neural Networks”, *IEEE Transactions on Information Forensics and Security*, vol. 15, pp: 2616-2628, 2020.
++ [1] A. Acien, A. Morales, J. Fierrez, R. Vera-Rodriguez. BeCAPTCHA-Mouse: Synthetic Mouse Trajectories and Improved Bot Detection. arXiv:2005.00890, 2019.
 
-+ [CVPR2019_MobileTouchDB] R. Tolosana, J. Gismero-Trujillo, R. Vera-Rodriguez, J. Fierrez and J. Ortega-Garcia, "MobileTouchDB: Mobile Touch Character Database in the Wild and Biometric Benchmark", in *Proc. IEEE Conf. on Computer Vision and Pattern Recognition Workshops, CVPRw*, Long Beach, USA, 2019.
++ [2] C. Shen, Z. Cai, X. Guan, R. Maxion. Performance evaluation of anomalydetection algorithms for mouse dynamics, Computers & Security, 45: 156–171, 2014.
 
-Please remember to reference articles [CVPR2019_MobileTouchDB] on any work made public, whatever the form, based directly or indirectly on any part of the MobileTouchDB database.
++ [3] M. Djioua, R. Plamondon. A new algorithm and system for the characterization of handwriting strokes with delta-lognormal parameters, IEEE Transactions on Pattern Analysis and Machine Intelligence, 31(11),2060–2072, 2009.
+2060–2072.
+
+Please remember to reference article [1] on any work made public, whatever the form, based directly or indirectly on any part of the BeCAPTCHA-Mouse benchmark.
