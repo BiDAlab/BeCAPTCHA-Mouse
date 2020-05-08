@@ -54,7 +54,7 @@ BeCAPTCHA-Mouse benchmark are composed by two main folders: *'DB_GAN'* which con
 
   + COLUMN 2: represents the **ŷ** coordinate.
 
-+ .ana files: each row contains a log-normal signal extracted from the mouse trayectory, this log-normal signal is definded by 6 parameters. One parameter in each column:  
++ .ana files: each row contains a log-normal signal extracted from the synthetic mouse trayectory, this log-normal signal is definded by 6 parameters. One parameter in each column:  
 
   + COLUMN 1: represents the *D* parameter.
 
@@ -98,7 +98,7 @@ The nomenclature followed to name the files of the function-based method is: NNN
 #### REFERENCES
 For further information on the benchmark and on different applications where it has been used, we refer the reader to (all these articles are publicly available in the [publications](http://atvs.ii.uam.es/atvs/listpublications.do) section of the BiDA group webpage).
 
-+ [1] A. Acien, A. Morales, J. Fierrez, R. Vera-Rodriguez. BeCAPTCHA-Mouse: Synthetic Mouse Trajectories and Improved Bot Detection. arXiv:2005.00890, 2019.
++ [1] A. Acien, A. Morales, J. Fierrez, R. Vera-Rodriguez. BeCAPTCHA-Mouse: Synthetic Mouse Trajectories and Improved Bot Detection. arXiv:2005.00890, 2019.[[pdf](https://https://arxiv.org/pdf/2005.00890.pdf)]
 
 + [2] C. Shen, Z. Cai, X. Guan, R. Maxion. Performance evaluation of anomalydetection algorithms for mouse dynamics, Computers & Security, 45: 156–171, 2014.
 
