@@ -54,7 +54,7 @@ BeCAPTCHA-Mouse benchmark are composed by two main folders: *'DB_GAN'* which con
 
   + COLUMN 2: represents the **ŷ** coordinate.
 
-+ .ana files: each row contains a log-normal signal extracted from the mouse trayectory, this log-normal signal is definded by 6 parameters.  
++ .ana files: each row contains a log-normal signal extracted from the mouse trayectory, this log-normal signal is definded by 6 parameters. One parameter in each column:  
 
   + COLUMN 1: represents the *D* parameter.
 
