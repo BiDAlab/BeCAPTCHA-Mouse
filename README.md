@@ -40,10 +40,9 @@ For this approach we employ a GAN (Generative Adversarial Network),in which two 
 ![](https://github.com/BiDAlab/BeCAPTCHA-Mouse/blob/master/Fig6.png)
 Figure 2. The proposed architecture to train a GAN Generator of synthetic mouse trajectories.The Generator learns the human features of the mouse trajectories and generate human-like ones from Gaussian Noise.
 
-The aim of the Generator is to fool the Discriminator by generating fake samples (mouse trajectories in this work) very similar to the real ones while the Discriminator has to predict whether the sample comes from the real set or is a fake created by the Generator. Once the Generator is trained this way, then we can use it to synthesize mouse trajectories very similar to the human ones.
-The topology employed in both Generator and Discriminator consist of two LSTM (Long Short-Term Memory) layers followed by a dense layer, very similar to a recurrent auto-encoder. The dense layer of the Discriminator is used as a classification layer to distinguish between fake and real mouse trajectories, while the Generator employs the dense layer to build synthetic mouse trajectories.
+The aim of the Generator is to fool the Discriminator by generating synthetic mouse trajectories very similar to the real ones, while the Discriminator has to predict whether the sample comes from the real set or is a fake created by the Generator. Once the Generator is trained this way, then we can use it to synthesize mouse trajectories very similar to the human ones.
 Fig. 1 shows two examples (trajectories B and C) of synthetic mouse trajectories generated with the GAN network and the comparison with a real one.  
-The human mouse trajectories employed to train the GAN network  were extracted from Chao *et al.* [2] database, which is comprised of more than 200K mouse trajectories acquired from 58 users who completed 300 repetitions of the task.In each repetition, the task was to click 8 buttons that appeared in the screen sequentially. This task was repeated twice in each session
+The human mouse trajectories employed to train the GAN network were extracted from Chao *et al.* [2] database, which is comprised of more than 200K mouse trajectories acquired from 58 users who completed 300 repetitions of the task.In each repetition, the task was to click 8 buttons that appeared in the screen sequentially. This task was repeated twice in each session
 
 
 #### BENCHMARK STRUCTURE
