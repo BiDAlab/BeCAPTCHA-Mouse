@@ -32,13 +32,13 @@ Fig. 1 (trajectories D, E, and F) shows some examples of these mouse trajectorie
 with this approach by varying the parameters of each function.
 
 ![](https://github.com/BiDAlab/BeCAPTCHA-Mouse/blob/master/Fig5.png)
-Figure 1. Examples of mouse trajectories and their velocity profiles employed in this work: *A* is a real one extracted from a task of the database; *B* and *C* are synthetic trajectories generated with the GAN network; *D*, *E* and *F* are generated with the knowledge-based approach. Note that for each velocity profile (*D* = Gaussian, *E* = constant, *F* = logarithmic), we include the three knowledge-based trajectories (linear, quadratic, and exponential).
+**Figure 1. Examples of mouse trajectories and their velocity profiles employed in this work: *A* is a real one extracted from a task of the database; *B* and *C* are synthetic trajectories generated with the GAN network; *D*, *E* and *F* are generated with the knowledge-based approach. Note that for each velocity profile (*D* = Gaussian, *E* = constant, *F* = logarithmic), we include the three knowledge-based trajectories (linear, quadratic, and exponential).**
 
 **Method 2: GAN-based Trajectories**  
 For this approach we employ a GAN (Generative Adversarial Network),in which two neuronal networks, commonly named Generator and Discriminator, are trained one against the other (thus the \adversarial"). The architecture of the GAN is depicted in Fig. 2.
 
 ![](https://github.com/BiDAlab/BeCAPTCHA-Mouse/blob/master/Fig6.png)
-Figure 2. The proposed architecture to train a GAN Generator of synthetic mouse trajectories.The Generator learns the human features of the mouse trajectories and generate human-like ones from Gaussian Noise.
+**Figure 2. The proposed architecture to train a GAN Generator of synthetic mouse trajectories.The Generator learns the human features of the mouse trajectories and generate human-like ones from Gaussian Noise.**
 
 The aim of the Generator is to fool the Discriminator by generating synthetic mouse trajectories very similar to the real ones, while the Discriminator has to predict whether the sample comes from the real set or is a fake created by the Generator. Once the Generator is trained this way, then we can use it to synthesize mouse trajectories very similar to the human ones.
 Fig. 1 shows two examples (trajectories B and C) of synthetic mouse trajectories generated with the GAN network and the comparison with a real one.  
