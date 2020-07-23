@@ -22,7 +22,7 @@ BeCAPTCHA-Mouse Benchmark for development of bot detection technologyes based on
 
 
 ## DESCRIPTION OF BeCAPTCHA-Mouse BENCHMARK
-BeCAPTCHA-Mouse benchmark contains more than 10K synthetic mouse trayectories generated with two methods: 
+BeCAPTCHA-Mouse benchmark contains 9K synthetic mouse trayectories generated with two methods: 
 
 **Method 1: Function-based Mouse Trajectory Synthesis**  
 With this approach the mouse trajectories are generated according to three different trajectory shapes (linear, quadratic, and exponential) and three different velocity profiles (constant, logarithmic, and Gaussian). 
@@ -42,7 +42,7 @@ For this approach we employ a GAN (Generative Adversarial Network),in which two 
 
 The aim of the Generator is to fool the Discriminator by generating synthetic mouse trajectories very similar to the real ones, while the Discriminator has to predict whether the sample comes from the real set or is a fake created by the Generator. Once the Generator is trained this way, then we can use it to synthesize mouse trajectories very similar to the human ones.
 Fig. 1 shows two examples (trajectories B and C) of synthetic mouse trajectories generated with the GAN network and the comparison with a real one.  
-The human mouse trajectories employed to train the GAN network were extracted from Chao *et al.* [2] database, which is comprised of more than 200K mouse trajectories acquired from 58 users who completed 300 repetitions of the task.In each repetition, the task was to click 8 buttons that appeared in the screen sequentially. This task was repeated twice in each session
+The human mouse trajectories employed to train the GAN network were extracted from Chao *et al.* [2] database, which is comprised of more than 200K mouse trajectories acquired from 58 users who completed 300 repetitions of the task. In each repetition, the users had to click 8 buttons that appeared in the screen sequentially. This task was repeated twice in each session.
 
 
 #### BENCHMARK STRUCTURE
