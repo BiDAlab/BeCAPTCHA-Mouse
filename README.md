@@ -2,6 +2,9 @@
 BeCAPTCHA-Mouse Benchmark for development of bot detection technologyes based on mouse dynamics.
 
 ## INSTRUCTIONS FOR DOWNLOADING BeCAPTCHA-Mouse Benchmark
+
+**IMPORTANT: the agreement must be signed by a permanent member of a research institution and submitted from an official email account of the institution. Agreement signed by students are not valid.**
+
 1) [Download license agreement](https://bidalab.eps.uam.es/static/licenses/BeCAPTCHA-Mouse_License_Agreement.pdf), send by email one signed and scanned copy to **atvs@uam.es** according to the instructions given in point 2.
  
  
